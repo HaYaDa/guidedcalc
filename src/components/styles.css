@@ -1,0 +1,182 @@
+/* css reset */
+
+@font-face {
+    font-family: 'digital-7regular';
+    src: url('./fonts/digital-7.woff2') format('woff2'),
+         url('./fonts/digital-7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*, 
+*::after, 
+::before {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62,5%;
+    
+}
+
+body {
+    font-family: inherit; 
+}
+
+/* variables */
+
+:root {
+    --color-white: #fff; 
+    --color-light-white: #eee; 
+
+    --color-tomato: #d40640; 
+    --color-purple-transparent: rgba(88, 24, 69, .9); 
+    --color-pink-transparent: rgba(216, 14, 91, .9); 
+
+    --color-dodger: dodgerblue; 
+    
+    --color-light-black: #222; 
+    --color-black: #000; 
+
+    --shadow: rgb(253, 0, 0);
+}
+
+.app {
+    height: 100vh;
+    width: 100%; 
+    background-image: 
+         
+        url(https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif);
+    background-repeat: repeat; 
+    background-size: cover; 
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 80vh; 
+    width: 25%; 
+    box-shadow: 0 2rem 4rem var(--shadow);
+    /*background-color: var(--color-white);*/
+    background-color: transparent; 
+}
+
+.result-screen {
+    height: 19vh;
+    font-size: 8rem; 
+    font-weight: 600;
+    background-color: black;
+    font-family: 'digital-7regular';
+    src: url('./fonts/digital-7.woff2') format('woff2'),
+         url('./fonts/digital-7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    color: green; 
+    padding-right: 0.5vh; 
+
+    /* to display the value at the bottom-right of the container */
+    display: flex; 
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    
+    
+    
+
+}
+
+.computation-screen {
+    height: 6vh;
+    font-size: 2.5rem;
+    background-color: black; 
+    font-family: 'digital-7regular';
+    src: url('./fonts/digital-7.woff2') format('woff2'),
+         url('./fonts/digital-7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    color: greenyellow; 
+    padding-bottom: 1vh;
+    padding-right: 1vh;  
+
+    /* to display the value at the bottom-right of the container */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.screen {
+    height: 25vh;
+    width: 100%; 
+    padding: 0 2rem; 
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--color-light-white);
+    background-color: transparent;
+}
+
+.keypad_row {
+    height: 11vh; /*(80vh calculator - 25vh screen) / 5 keypadRow comp = 11vh */
+    width: 100%; 
+    display: flex; /* to control the dimension */
+    color: white; 
+    background-color: transparent; 
+}
+
+.keypad {
+    height: 55vh; 
+    width: 100%;
+    background-color: transparent;  
+}
+
+.btn {
+    width: 25%;
+    height: 100%;
+    font-size: 3rem;
+    font-family: inherit;
+    background-color: transparent /*var(--color-light-white)*/;
+    border: 1px solid transparent;
+    outline: none; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+
+.btn:hover {
+    color: var(--color-light-white);
+    background-color: var(--color-tomato);
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+.btn--large {
+    width: 50%;
+    color: var(--color-white);
+    background-color: var(--color-tomato);
+    transition: all .2s;
+}
+
+.btn--large:hover {
+    background-color: var(--color-white);
+    color: var(--color-tomato); 
+}
+
+.btn--primary {
+    color: var(--color-tomato);
+}
+
+.btn--operator {
+    color: var(--color-dodger); 
+}
+
+input {
+    text-align: right;
+    width: 100%; 
+}
